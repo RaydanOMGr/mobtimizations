@@ -54,11 +54,7 @@ dependencies {
 	modImplementation 'com.electronwill.night-config:core:3.6.5'
 	modImplementation "com.electronwill.night-config:toml:3.6.5"
 
-	fileTree("${project.projectDir}/libs").matching {
-		include '*.jar'
-	}.each {
-		modImplementation files(it)
-	}
+	modImplementation "com.corosus.coroutil:coroutil-fabric:1.21.0-1.3.7"
 	
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
